@@ -2,112 +2,95 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Google</title>
-    <link rel="icon" href="google.png">
-    <style>
-    body{
-      padding: 0;
-      margin: 0;
-      background-color: white;
-      font-family: arial;
-    }
-    .order-list{
-     list-style: none;
-     display: flex;
-     padding-left: 1190px;
-     font-size: 14px;
-    }
-    #img{
-      border-radius: 50%;
-      height : auto;
-      width: auto;
-      cursor: pointer;
-    }
-    #gmail{
-      padding-right: 15px;
-      padding-top: 7px;
-      cursor: pointer;
-    }
-    #images{
-      padding-right: 15px;
-      padding-top: 7px;
-      cursor: pointer;
-    }
-    #logo{
-      padding-top: 109px;
-      width: 272px;
-      height: auto;
-      padding-left: 39%;
-      cursor: pointer;
-    }
-    #search{
-      border-radius: 42px;
-      border: 1px solid #e0dfdc;
-      width: 525px;
-      margin-left: 400px;
-      padding-top: 22px;
-      margin-top: 20px;
-    }
-    #search:hover{
-      box-shadow: 0.5px 1px 1px 1px gray;
-    }
-    .buttons{
-      font-family: arial;
-
-    }
-    #button1{
-      margin-left: 39%;
-      padding: 9px 13px 9px 13px;
-      border: none;
-      border-radius: 80px;
-      cursor: pointer;
-    }
-    #button2{
-      margin: 25px 0 0 12px;
-      padding: 9px 13px 9px 13px;
-      border: none;
-      border-radius: 80px;
-      cursor: pointer;
-    }
-    #offer_statement{
-      font-size: 13px;
-      font-family: sans-serif;
-      margin-left: 40%;
-      margin-top: 45px;
-    }
-
-    </style>
+    <title>Website Design Using HTML and CSS</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+       <div class="banner">
+         <div class="left-box">
+           <div class="wrapper">
+             <div class="search-box">
+               <img src="search.png" alt="">
+               <input type="text" name="" value="" placeholder="Search">
+             </div>
 
-  <div class="nav-bar">
-    <ul class="order-list">
-      <li id="gmail">Gmail</li>
-      <li id="images">Images</li>
-      <li id="account_name"><img id="img" src="https://lh3.googleusercontent.com/ogw/ADGmqu96MBJeru3E_uOT_H86sh0gvPmfxE9542VgrGDL=s32-c-mo" title="Google"</li>
-    </ul>
-  </div>
+             <div class="vertical-line"></div>
+             <ul>
+               <li><a href="#">PRODUCTION</a></li>
+               <li><a href="#">FACILITY</a></li>
+               <li><a href="#">MECHANISM</a></li>
+               <li><a href="#">OUR TEAM</a></li>
+               <li><a href="#">OUR IDEAS</a></li>
 
-   <div class="logo">
-     <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" title="Google">
-   </div>
+             </ul>
 
-   <div class="search_bar">
+           </div>
+         </div>
+         <div class="right-box">
+          <nav>
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">TECHNOLOGY</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+            </ul>
+          </nav>
+          <h2>THE NEXT<br>GENERATION</h2>
+          <div class="robot">
+           <img src="robo.png" alt="">
+           <h1>ROBOTICS</h1>
+           <div class="features">
+             <div>
+               <small>WATCH PREVIEW</small>
+               <img src="play.png" alt="">
+             </div>
+             <div>
+               <small>THE MAKING</small>
+               <img src="settings.png" alt="">
+             </div>
+             <div>
+               <small>DOWNLOAD PDF</small>
+               <img src="download.png" alt="">
+             </div>
+           </div>
+          </div>
+          <div class="circle"></div>
+          <div class="pagination">
+            <ul>
+              <li class="active"><a href="#">01</a></li>
+              <li><a href="#">02</a></li>
+              <li><a href="#">03</a></li>
+              <li><a href="#">04</a></li>
+              <li><a href="#">05</a></li>
+            </ul>
+          </div>
+         <img src="volume.png" alt="" class="volume">
+         </div>
+       </div>
+       <div class="smallCursor"></div>
+       <div class="largeCursor"></div>
 
-     <label for="search">
-       <input id="search" type="text"
-       name="" value="" title="search">
-     </label>
-   </div>
+       <script>
 
-    <div class="buttons">
-      <input id="button1" type="button" name="button" value="Google Search">
-      <input id="button2" type="button" name="button" value="I'm Feeling Lucky">
-    </div>
+          var smallCursor = document.querySelector(".smallCursor");
+          var largeCursor = document.querySelector(".largeCursor");
 
-     <div class="offers">
-       <p id="offer_statement">Google is also offered in: <a href="#">francias </a>   <a href="#">العربية</a></p>
-     </div>
+          document.onmousemove = function(e) {
+            smallCursor.style.left = (e.pageX - 5) + "px";
+            smallCursor.style.top = (e.pageY - 5) + "px";
+
+            smallCursor.style.display = "block";
+
+            largeCursor.style.left = (e.pageX - 22) + "px";
+            largeCursor.style.top =  (e.pageY - 22) + "px";
+
+            largeCursor.style.display = "block";
+          }
+
+       </script>
+
+
+
+
   </body>
 </html>
